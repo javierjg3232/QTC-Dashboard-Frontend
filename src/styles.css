@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* form validation */
+.error-feedback {
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255);
+  margin: 0.3rem !important;
+  margin-top: 0.1rem !important;
+}
+
+.qtc-purple-text {
+  color: rgb(159, 27, 150);
+}
+
+.qtc-purple-background {
+  background-color: rgb(159, 27, 150);
+}

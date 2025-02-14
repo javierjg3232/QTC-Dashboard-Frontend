@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/dashboard">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left side menu links -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/dashboard">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tables">Survey Tables</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/uploads">Uploads</a>
+        </li>
+      </ul>
+     
+      <!-- Filter Form (centered and aligned) -->
+      <form [formGroup]="surveyFilterForm" (ngSubmit)="applyFilter()" class="d-flex flex-wrap align-items-center gap-2 ms-auto">
+   
+   
+        <!-- Survey Type Selection -->
+        <div class="form-floating mb-2">
+          <select id="surveyType" class="form-select" formControlName="surveyType">
+            <option value="" disabled selected>Select a survey type</option>
+            <option *ngFor="let type of surveyTypes" [value]="type">{{ type }}</option>
+          </select>
+          <label for="surveyType">Survey Type</label>
+        </div>
+   
+   
+        <!-- Date Range Picker -->
+        <div class="form-floating mb-2">
+          <select id="dateRange" class="form-select" formControlName="dateRange">
+            <option value="" disabled selected>Select a Date Range</option>
+            <option *ngFor="let range of dateRanges" [value]="range">{{ range }}</option>
+          </select>
+          <label for="dateRange">Date Range</label>
+        </div>
+
+        <!-- Filter Button -->
+        <button type="submit" class="btn btn-primary" [disabled]="!surveyFilterForm.valid">Filter</button>
+    </form>
+   
+    <!-- Logout Button -->
+    <button class="btn btn-dark ms-2" (click)="onLogout()">Logout</button>
+  </div>
+ </nav>

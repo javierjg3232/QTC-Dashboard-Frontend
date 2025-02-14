@@ -1,0 +1,23 @@
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <!-- Dynamically create table headers -->
+          <th *ngFor="let header of tableHeaders">{{ header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamically display survey data -->
+        <tr *ngFor="let survey of surveys">
+          <td *ngFor="let header of tableHeaders">{{ survey[header] }}</td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="deleteFile(survey.id)">Delete</button>
+          </td>
+        </tr>
+        <tr *ngIf="surveys.length === 0">
+          <td colspan="100%" class="text-center">No data found.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
