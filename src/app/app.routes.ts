@@ -5,6 +5,7 @@ import { LoginComponent } from './user/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablesComponent } from './tables/tables.component';
 import { UploadsComponent } from './uploads/uploads.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/signin', pathMatch: 'full' },
@@ -17,5 +18,6 @@ export const routes: Routes = [
   },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'tables', component: TablesComponent },
-  { path: 'uploads', component: UploadsComponent }
+  { path: 'uploads', component: UploadsComponent },
+  { path: 'profile', component: ProfilePageComponent },
 ];
