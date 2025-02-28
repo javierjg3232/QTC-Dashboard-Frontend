@@ -1,21 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/dashboard">Dashboard</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-   
+<nav class="navbar navbar-expand-lg navbar-light qtc-purple-background">
+  <a class="navbar-brand" href="/dashboard">
+    <img src="Leidos-QTC-lockup-wht-rgb-@4x.png" alt="Logo" width="100" height="50" class="d-inline-block align-top">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Left side menu links -->
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/dashboard">Home</a>
+          <a class="nav-link text-white" routerLink="/dashboard">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/tables">Survey Tables</a>
+          <a class="nav-link text-white" routerLink="/tables">Survey Tables</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/uploads">Uploads</a>
+          <a class="nav-link text-white" routerLink="/uploads">Uploads</a>
         </li>
       </ul>
      
@@ -43,7 +45,7 @@
         </div>
 
         <!-- Filter Button -->
-        <button type="submit" class="btn btn-primary" [disabled]="!surveyFilterForm.valid">Filter</button>
+        <button type="submit" class="btn btn-light" [disabled]="!surveyFilterForm.valid">Filter</button>
     </form>
    
     <!-- Logout Button -->

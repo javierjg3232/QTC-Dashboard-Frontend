@@ -3,7 +3,6 @@
 @if (isDashboardFiltered()) {
 <div class="container">
   <div class="row">
-    <!-- Reduce gutter spacing -->
     <div class="col-md-4">
       <app-average-score-card [scores]="[8, 7, 9, 6, 7, 8, 9]"></app-average-score-card>
     </div>
@@ -16,7 +15,7 @@
   </div>
 </div>
 <br />
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-4 border">
       <h3 class="text-center">Sentiment Score Breakdown</h3>
@@ -30,5 +29,7 @@
 </div>
 }
 @else {
-  <h1>Select a survey type and range</h1>
+  <div class="container-fluid">
+    <p class="h1 text-center">Select a survey type and range</p>
+  </div>
 }
